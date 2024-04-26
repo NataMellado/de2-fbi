@@ -29,8 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         const data = await response.json();
         signInForm.classList.add("hidden");
-        welcomeMessage.innerHTML = `<h1>Bienvenido, ${email}</h1>
-                                    <a href="/dashboard" id="dashboardLink">Ir al Dashboard</a>`;
+        welcomeMessage.innerHTML = `<h1 class="welcomeTitle">Bienvenido, <br> ${email}</h1>
+                                    <button class="btn-style" onclick="window.location.href='/dashboard'" id="dashboardButton">Ir al Dashboard</button>`;
       }
 
     });
