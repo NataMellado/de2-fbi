@@ -11,3 +11,8 @@
     flex-direction: column;
     height: 60vh;
   }
+
+  #signInForm.hidden {
+    display: none;
+  }
+

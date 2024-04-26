@@ -4,32 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FBI System</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="../css/style.css">
   </head>
 
   <body>
 
-      <h1>&#128374; FBI System &#128374;</h1>
+      <h1> FBI System </h1>
 
       <!-- Formulario de ingreso -->
-      <div class="card bg-dark text-center">
-        <div class="card-body">
-          <form action="/SignIn">
-            <h1>&#128372;&#128372;&#128372;</h1>
-            <h5 class="card-title text-center">Ingrese sus credenciales</h5>
-            <div class="row d-flex align-items-center mb-1">
-              <div class="col-12">Email:</div>
-              <div class="col-7 m-auto"><input type="text" name="email" class="form-control" /></div>
+      <div class="main_container">
+        <div class="main_card">
+
+          <!-- Formulario de ingreso -->
+          <form id="signInForm" action="/signIn" method="POST">
+            <h5 class="form_title">Ingrese sus credenciales</h5>
+            <!-- Email -->
+            <div class="form_email__container">
+              <div>Email:</div>
+              <div><input type="text" id="email" name="email" class="form-control" required autocomplete="username"/></div>
             </div>
-            <div class="row d-flex align-items-center">
-              <div class="col-12">Password:</div>
-              <div class="col-7 m-auto"><input type="text" name="password" class="form-control" /></div>
+            <!-- Password -->
+            <div class="form_pass__container">
+              <div>Password:</div>
+              <div><input type="password" id="password" name="password" class="form-control" required autocomplete="current-password"/></div>
             </div>
-            <button class="btn bg-light my-3">Ingresar &#128373;</button>
+            <!-- Boton de ingreso -->
+            <button type="submit" class="btn">Ingresar</button>
+            <span id="errorMessage"></span>
           </form>
+
+          <!-- Mensaje de bienvenida -->
+          <div id="welcomeMessage">
+          </div>
+
         </div>
       </div>
 
+      <script src="../js/login.js"></script>
   </body>
 </html>
