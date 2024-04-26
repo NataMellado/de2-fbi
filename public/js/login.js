@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Si la respuesta no es exitosa desde el servidor, mostrar el mensaje de error en el id errorMessage
       if (!response.ok) {
         const errorData = await response.json();
-        errorMessage.innerHTML = errorData.error;
+        errorMessage.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i>' + " " + errorData.error;
         document.getElementById("email").value = "";
         document.getElementById("password").value = "";
 

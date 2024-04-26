@@ -41,7 +41,7 @@ padding: 1rem;
   -webkit-backdrop-filter: blur(10.6px);
   border: 1px solid rgba(255, 255, 255, 0.24);
 
-  max-width: 300px;
+  max-width: 320px;
   min-height: 500px;
   width: 100%;
   display: flex;
@@ -60,7 +60,7 @@ padding: 1rem;
 #signInForm {
   display: grid;
   gap: 2rem;
-  max-width: 200px;
+  max-width: 220px;
   width: 100%;
 }
 
